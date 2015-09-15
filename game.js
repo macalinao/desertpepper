@@ -29,43 +29,12 @@ function Game(canvas) {
     this.clouds = new Clouds(this);
     this.pepperManager = new PepperManager(this);
 
-    this.images = {
-        bg: (function() {
-            var img = new Image();
-            img.src = "bg.png";
-            return img;
-        })(),
-
-        redpepper: (function() {
-            var img = new Image();
-            img.src = "redpepper.png";
-            return img;
-        })(),
-
-        greenpepper: (function() {
-            var img = new Image();
-            img.src = "greenpepper.png";
-            return img;
-        })(),
-
-        clouds: (function() {
-            var img = new Image();
-            img.src = "clouds.png";
-            return img;
-        })(),
-
-        mexican: (function() {
-            var img = new Image();
-            img.src = "mexican.png";
-            return img;
-        })(),
-
-        mexicanEat: (function() {
-            var img = new Image();
-            img.src = "mexican_mouth.png";
-            return img;
-        })()
-    };
+    var images = this images = {};
+    ['bg', 'redpepper', 'greenpepper', 'clouds', 'mexican', 'mexicanEat'].map(function(el) {
+      var img = new Image();
+      img.src = 'img/' + el + '.png';
+      images[el] = img;
+    });
 
     this.sounds = {
         bg: (function() {
