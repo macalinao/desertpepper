@@ -1,3 +1,6 @@
+var FPS = 60;
+var TPS = 1000 / FPS;
+
 $(function() {
   window.keydown = {};
 
@@ -55,8 +58,8 @@ function Game(canvas) {
     var that = this;
     this.sounds.bg.play();
     setInterval(function() {
-      that.tick(50);
-    }, 50);
+      that.tick(TPS);
+    }, TPS);
   };
 
   this.tick = function(delta) {
