@@ -29,7 +29,7 @@ function Game(canvas) {
   this.clouds = new Clouds(this);
   this.pepperManager = new PepperManager(this);
 
-  var images = this images = {};
+  var images = this.images = {};
   ['bg', 'redpepper', 'greenpepper', 'clouds', 'mexican', 'mexicanEat'].map(function(el) {
     var img = new Image();
     img.src = 'img/' + el + '.png';
