@@ -70,7 +70,7 @@ function Game(canvas) {
     this.sounds = {
         bg: (function() {
             var aSound = document.createElement('audio');
-            aSound.setAttribute('src', 'mariachi.mp3');
+            aSound.setAttribute('src', 'mariachi.ogg');
             aSound.load();
             return aSound;
         })()
